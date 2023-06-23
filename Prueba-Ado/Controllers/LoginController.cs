@@ -29,8 +29,6 @@ namespace Prueba_Ado.Controllers
             SignInManager = signInManager;
         }
 
-
-
         [HttpPost("CreateAcount")]
         public async Task<ActionResult<RespuestaAutenticacion>> CreateAcount(UserLogin login)
         {
