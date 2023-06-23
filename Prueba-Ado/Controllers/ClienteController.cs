@@ -20,7 +20,6 @@ namespace Prueba_Ado.Controllers
         }
 
         [HttpGet]
-        
         public async Task<ActionResult<List<Cliente>>> Get()
         {
             return await _Cliente.GetClientes();
