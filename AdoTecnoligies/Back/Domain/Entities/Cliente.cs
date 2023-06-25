@@ -11,14 +11,14 @@ namespace Domain.Entities
 
         public Cliente(string tipoIdentificacion, string numeroIdentificacion, string nombre, string apellido, string genero)
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             TipoIdentificacion = tipoIdentificacion;
             NumeroIdentificacion = numeroIdentificacion;
             Nombre = nombre;
             Apellido = apellido;
             Genero = genero;
         }
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
         public string TipoIdentificacion { get; set; }
         public string NumeroIdentificacion { get; set; }
         public string Nombre  { get; set; }

@@ -36,5 +36,11 @@ namespace Prueba_Ado.Controllers
         {
             return await _Cliente.UpdateCliente(cliente);
         }
+
+        [HttpPost("Delete")]
+        public async Task<ActionResult<bool>> Delete(Cliente cliente)
+        {
+            return await _Cliente.DeletedCliente(cliente);
+        }
     }
 }

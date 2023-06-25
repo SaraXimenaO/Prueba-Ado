@@ -57,5 +57,23 @@ namespace Application.Recaudos
                 return false;
             }
         }
+
+        public async Task<bool> DeletedCliente(Cliente Cliente)
+        {
+            var entity = _context.Clientes.FirstOrDefault(a => a.NumeroIdentificacion == Cliente.NumeroIdentificacion);
+
+            if (!string.IsNullOrEmpty(entity.NumeroIdentificacion))
+            {
+
+                _context.Clientes.Remove(entity);
+                _context.SaveChanges();
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

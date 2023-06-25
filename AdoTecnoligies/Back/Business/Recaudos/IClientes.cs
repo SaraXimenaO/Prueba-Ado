@@ -13,5 +13,6 @@ namespace Application.Recaudos
         Task<List<Cliente>> GetClientes();
         Task<bool> InsertCliente(Cliente Cliente);
         Task<bool> UpdateCliente(Cliente Cliente);
+        Task<bool> DeletedCliente(Cliente Cliente);
     }
 }
